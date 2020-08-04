@@ -24,15 +24,19 @@ const useStyles = makeStyles({
       padding: '40px',
     },
     div: {
-      padding: '80px',
-      backgroundColor: '#1652f0'
+      padding: '100px',
+      backgroundColor: '#1652f0',
+      height: '100vh',
     },
     h4: {
       color: 'white',
       fontFamily: 'helvetica',
     },
-    //not working for some reason 
     account: {
+      color: 'white',
+    },
+    button: {
+      backgroundColor: '#134ce4',
       color: 'white',
     }
   });
@@ -56,13 +60,13 @@ export default function Login() {
               <FormControlLabel control={<Checkbox name="checkedA" />} label="keep me logged in on this computer" />
               <CardActions>
                 <Box mx={'auto'}>
-                  <Button color="primary" variant="outlined" size="large">Login</Button>
+                  <Button className={classes.button} variant="outlined" size="large">Login</Button>
                 </Box>
               </CardActions>
             </form>
           </Card>
           <Box pt={2}>
-            <Typography classes={classes.account} variant='p'><Link href="#">Forgot password?</Link> <Link href="#">Don't have an account?</Link> <Link href="#">Privacy Policy</Link></Typography>
+            <Typography variant='p'><Link className={classes.account} href="#">Forgot password?</Link> <Link className={classes.account} href="#">Don't have an account?</Link> <Link className={classes.account} href="#">Privacy Policy</Link></Typography>
           </Box>
       </Grid>
     </div>
